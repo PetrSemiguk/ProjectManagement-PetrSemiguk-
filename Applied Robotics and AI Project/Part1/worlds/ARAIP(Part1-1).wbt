@@ -1,0 +1,92 @@
+#VRML_SIM R2025b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/701d7f440e42c0007a742acf5925b63086e32252/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/701d7f440e42c0007a742acf5925b63086e32252/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/701d7f440e42c0007a742acf5925b63086e32252/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/701d7f440e42c0007a742acf5925b63086e32252/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/701d7f440e42c0007a742acf5925b63086e32252/projects/robots/gctronic/e-puck/protos/E-puckDistanceSensor.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5007654373000201 0.36494212169744833 0.7848893072380873 2.102440716056065
+  position 0.623612086260341 -1.0648204995652288 3.4879560220078267
+}
+Solid {
+  translation -0.660053927314105 0.2000001893890331 0.049607708053036784
+  rotation -0.0068821108874163725 -0.6670699199026487 -0.7449633269569766 0.0002679891468216121
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0.666667 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.1
+      }
+    }
+  ]
+  name "GreenBlock"
+  boundingObject Box {
+    size 0.3 0.3 0.1
+  }
+  physics Physics {
+  }
+}
+Solid {
+  translation 0.25 -0.61 0.0496076
+  rotation -0.3277026231239129 0.7646394539558052 0.5549211621950226 7.805716732908438e-17
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+      }
+      geometry Box {
+        size 0.3 0.3 0.1
+      }
+    }
+  ]
+  name "BlueBlock"
+  boundingObject Box {
+    size 0.3 0.3 0.1
+  }
+  physics Physics {
+  }
+}
+Solid {
+  translation 0.61028 0.339991 0.0496398
+  rotation 0.4422756413762358 0.8968767725479657 0.0020765137090589937 0.00042037923450485707
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.1
+      }
+    }
+  ]
+  name "RedBlock"
+  boundingObject Box {
+    size 0.3 0.3 0.1
+  }
+  physics Physics {
+  }
+}
+RectangleArena {
+  rotation 0 0 1 0.273435
+  floorSize 2 2
+  floorTileSize 2 2
+}
+E-puck {
+  translation -0.00715463 -0.00221796 -0.00469826
+  rotation -0.0006445941690838452 -0.002657040696969783 0.9999962623095606 1.76758
+  controller "colour_detection"
+  groundSensorsSlot [
+    E-puckDistanceSensor {
+    }
+  ]
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
